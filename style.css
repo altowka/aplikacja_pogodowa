@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+}
+
+.container {
+    padding: 5%;
+}
+
+
+#weather-picture, h1, h2 {
+    text-align: center;
+}
+
+h1 {
+ color: #5f8dd3;
+}
+
+h2 {
+    color: rgb(255,221, 85)
+}
+
+.title {
+    padding-top: 30px
+}
+
+@media only screen and (max-width: 776px) {
+   #weather-picture {
+       margin-bottom: 20px;
+   }
+   #towns {
+       width: 100%;
+   }
+  }
