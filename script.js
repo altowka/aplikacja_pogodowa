@@ -1,10 +1,13 @@
-
 let towns = document.getElementById("towns");
+let cityName;
 
-let cityName = towns.value;
 
-function getPosts() {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=cc89fd42531d5a2498c425f76c416047`)
+
+towns.addEventListener('change', getPosts)
+
+function getPosts(e) {
+  cityName = e.target.value;
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=cc89fd42531d5a2498c425f76c416047`)
       .then((res) => res.json())
       .then((data) => {
     //     let output = '<h2 class="mb-4">Posts</h2>'
@@ -23,4 +26,6 @@ function getPosts() {
   
   }
 
-  getPosts()
+  // getPosts()
+
+ 
