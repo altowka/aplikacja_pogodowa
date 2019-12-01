@@ -11,16 +11,18 @@
 }
 
 
-#weather-picture, h1, h2 {
+#weather-picture,
+h1,
+h2 {
     text-align: center;
 }
 
 h1 {
- color: #5f8dd3;
+    color: #5f8dd3;
 }
 
 h2 {
-    color: rgb(255,221, 85)
+    color: rgb(255, 221, 85)
 }
 
 h4 {
@@ -41,61 +43,72 @@ li {
     position: absolute;
     bottom: 5px;
     right: 5px;
-    background-image:url('img/weather5.jpg');
-    background-repeat:no-repeat;
+    background-image: url('img/weather5.jpg');
+    background-repeat: no-repeat;
 }
 
 #temp {
     background-position: 17% 75%;
 }
+
 #temp_min {
     background-position: 83% 75%;
 }
+
 #temp_max {
     background-position: 100% 61%;
 }
+
 #pressure {
     background-position: 100% 75%;
 }
+
 #humidity {
     background-position: 100% 90%;
 }
+
 #speed {
     background-position: 0% 90%;
 }
+
 #deg {
     background-position: 15% 90%;
 }
 
 /* reszta wywoływana w js-ie */
-@keyframes fadeIn{
+@keyframes fadeIn {
     0% {
-      opacity:0;
+        opacity: 0;
     }
+
     100% {
-      opacity:1;
-    }
-  }
-
-
-@media only screen and (max-width: 776px) {
-   #weather-picture {
-       margin-bottom: 20px;
-   }
-   #towns {
-       width: 100%;
-   }
-   h4 {
-       margin-top: 30px;
-   }
-   #animated-img {
-       display: none;
-   }
-  }
-@media only screen and (min-width: 776px) {
-    #animated-img {
-        height: 60%;
-       
+        opacity: 1;
     }
 }
 
+
+@media only screen and (max-width: 776px) {
+    #weather-picture {
+        margin-bottom: 20px;
+    }
+
+    #towns {
+        width: 100%;
+    }
+
+    h4 {
+        margin-top: 30px;
+    }
+
+    #animated-img {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 776px) {
+    #animated-img {
+        height: 60%;
+        width: 70%;
+        margin: auto;
+    }
+}
