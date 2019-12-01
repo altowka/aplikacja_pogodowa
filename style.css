@@ -23,8 +23,49 @@ h2 {
     color: rgb(255,221, 85)
 }
 
+h4 {
+    text-align: center;
+}
+
 .title {
     padding-top: 30px
+}
+
+li {
+    position: absolute;
+}
+
+.img {
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-image:url('img/weather5.jpg');
+    background-repeat:no-repeat;
+    
+}
+
+#temp {
+    background-position: 17% 75%;
+}
+#temp_min {
+    background-position: 83% 75%;
+}
+#temp_max {
+    background-position: 100% 61%;
+}
+#pressure {
+    background-position: 100% 75%;
+}
+#humidity {
+    background-position: 100% 90%;
+}
+#speed {
+    background-position: 0% 90%;
+}
+#deg {
+    background-position: 15% 90%;
 }
 
 @media only screen and (max-width: 776px) {
@@ -34,4 +75,8 @@ h2 {
    #towns {
        width: 100%;
    }
+   h4 {
+       margin-top: 30px;
+   }
   }
+

@@ -17,10 +17,10 @@ function getPosts(e) {
             let weatherData = data.main
             let wind = data.wind
             for (let key in weatherData) {
-                output += `<li class="list-group-item">${key}: ${Math.round(Math.floor(weatherData[key]))}${addUnits(key)}</li>`
+                output += `<li class="list-group-item">${key}: ${Math.round(Math.floor(weatherData[key]))}${addUnits(key)}<div  id="${key}" class="img"></div></li>`
             }
             for (let key in wind) {
-                output += `<li class="list-group-item">wind-${key}: ${Math.round(Math.floor(wind[key]))}${addUnits(key)}</li>`
+                output += `<li class="list-group-item">wind-${key}: ${Math.round(Math.floor(wind[key]))}${addUnits(key)}<div  id="${key}" class="img"></div></li>`
             }
 
             weatherDiv.innerHTML = `<ul class="list-group mb-3">${output}</ul>`;
@@ -34,37 +34,36 @@ function getPosts(e) {
 }
 
 
-
-towns.addEventListener('change', getPosts)
-
 function addUnits(key) {
-
     switch (key) {
-        case "temp": 
-        case "temp_min": 
-        case "temp_max": 
+        case "temp":
+        case "temp_min":
+        case "temp_max":
             return "°";
             break;
-        case "pressure": return "hpa";
+        case "pressure":
+            return "hpa";
             break;
-        case "humidity": return "%";
+        case "humidity":
+            return "%";
             break;
-        case "speed": return "m/s";
+        case "speed":
+            return "m/s";
             break;
-        case "deg": 
-        if(key >= 0 &&  key< 90){
-            return " (north)"
-        }else if(key >= 90 &&  key< 180) {
-            return " (east)"
-        }else if(key >= 180 &&  key< 270) {
-            return " (south)"
-        }else {
-            return " (west)"
-        }
+        case "deg":
+            if (key >= 0 && key < 90) {
+                return " (north)"
+            } else if (key >= 90 && key < 180) {
+                return " (east)"
+            } else if (key >= 180 && key < 270) {
+                return " (south)"
+            } else {
+                return " (west)"
+            }
             break;
-        default: return ""
+        default:
+            return ""
     }
 }
 
-
-              
+towns.addEventListener('change', getPosts)
