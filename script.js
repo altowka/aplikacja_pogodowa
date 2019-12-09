@@ -11,7 +11,7 @@ window.addEventListener('load', function () {
                 if (resp.ok) {
                     return resp.json()
                 } else {
-                    throw new Error("Podana nazwa miejscowości jest niewłaściwa. Spróbuj podać najbliższe większe miasto")
+                    throw new Error("The name provided is not valid. Please enter a different city name")
                 }
             })
             .then((data) => {
@@ -27,6 +27,7 @@ window.addEventListener('load', function () {
                 }
 
                 weatherDiv.innerHTML = `<ul class="list-group mb-3">${output}</ul>`;
+                console.log(data);
 
             })
             .catch((err) => {
