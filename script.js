@@ -19,11 +19,11 @@ window.addEventListener('load', function () {
                 let weatherData = data.main
                 let wind = data.wind
                 for (let key in weatherData) {
-                    output += `<li class="list-group-item">${key}: ${Math.round(Math.floor(weatherData[key]))}${addUnits(key)}<div  id="${key}" class="img"></div></li>`
+                    output += `<li class="list-group-item">${key}: ${Math.round(Math.floor(weatherData[key]))}${addUnits(weatherData, key)}<div  id="${key}" class="img"></div></li>`
                     displayImages(weatherData, key);
                 }
                 for (let key in wind) {
-                    output += `<li class="list-group-item">wind-${key}: ${Math.round(Math.floor(wind[key]))}${addUnits(key)}<div  id="${key}" class="img"></div></li>`
+                    output += `<li class="list-group-item">wind-${key}: ${Math.round(Math.floor(wind[key]))}${addUnits(wind, key)}<div  id="${key}" class="img"></div></li>`
                 }
 
                 weatherDiv.innerHTML = `<ul class="list-group mb-3">${output}</ul>`;
